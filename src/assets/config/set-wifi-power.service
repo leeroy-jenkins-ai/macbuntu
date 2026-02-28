@@ -1,0 +1,12 @@
+[Unit]
+Description=Set Wi-Fi transmit power to stable value (MacBook Pro 2016 BCM43602 fix)
+After=network.target
+
+[Service]
+Type=oneshot
+# Adjust the interface name if needed (check with: ip link show)
+ExecStart=/sbin/iwconfig wlp3s0 txpower 10dBm
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

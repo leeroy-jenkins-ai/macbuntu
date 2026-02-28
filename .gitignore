@@ -1,0 +1,6 @@
+# Ignore large binary assets — download these manually per the Maintenance Guide
+src/assets/bin/
+src/assets/packages/
+
+# OS files
+.DS_Store
